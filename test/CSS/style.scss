@@ -13,6 +13,7 @@
     "aside main" 1fr
     "footer footer" 150px
     /350px auto;
+
     @include xs{
         grid:
         "header"auto
@@ -85,21 +86,34 @@ aside{
     .block{
         margin-bottom: 5rem;
 
-    h3{
-        margin-bottom: 0;
-        font-size: 1.4rem;
-    }
+        .logo-comp{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
 
-    p{
+            h3{
+                margin-left: 2rem;
+                align-self: center;
+            }
 
-        margin: 0 0 2rem 0;
-        font-style: italic;
-    }
-    .bar-skill{
-        margin: 2rem 0;
-        height: 5px;
-        background: var(--hint);
-        position: relative;
+        }
+
+
+        h3{
+            margin-bottom: 0;
+            font-size: 1.4rem;
+        }
+
+        p{
+
+            margin: 0 0 2rem 0;
+            font-style: italic;
+        }
+        .bar-skill{
+            margin: 2rem 0;
+            height: 5px;
+            background: var(--hint);
+            position: relative;
 
         .bar-skill-progress{
             position: absolute;
@@ -120,7 +134,27 @@ aside{
 
         }
 
-        .javascript1{
+        .python-progress{
+            position: absolute;
+            height: 5px;
+            top: 0;
+            left: 0;
+            width: 90%;
+            background: var(--dark);
+        }
+
+        .python-dot{
+            position: absolute;
+            height: 10px;
+            width: 10px;
+            background: var(--dark);
+            left: calc(90% - 5px);
+            top: -2.5px;
+            transform: rotate(45deg);
+
+        }
+
+        .javascript-progress{
             position: absolute;
             height: 5px;
             top: 0;
@@ -129,7 +163,7 @@ aside{
             background: var(--dark);
         }
 
-        .javascript{
+        .javascript-dot{
             position: absolute;
             height: 10px;
             width: 10px;
@@ -191,41 +225,98 @@ main{
         padding: 5rem 1.5rem;
     }
 
+    .text-maths{
+        color: var(--primary);
+        font-weight: bold;
+    }
+
     h2 {
     margin-bottom: 4rem;
     }
     p {
     letter-spacing: 0.1rem;
     line-height: 3rem;
+    font-size: 1.6rem;
     }
     .experience {
-    display: flex;
-    margin: 6rem 0;
-    .timeline {
-    text-align: center;
-    color: var(--hint);
-    padding-right: 2rem;
-    border-right: 1px solid var(--border);
-    p {
-    margin: 0;
-    }
-    }
-    .content {
-    padding: 0 1rem;
-    h3 {
-    margin: 0;
-    }
-    p {
-    margin: 0;
-    }
-    ul {
-    margin: 2rem 0;
-    list-style: circle;
-    padding-left: 4rem;
-    }
-    }
+        display: flex;
+        margin: 6rem 0;
+        .timeline {
+            text-align: center;
+            color: var(--hint);
+            padding-right: 2rem;
+            border-right: 1px solid var(--border);
+                p {
+                    margin: 0;
+                }
+        }
+        .content {
+            padding: 0 1rem;
+            h3 {
+                    margin: 0;
+                    font-size: medium;
+                }
+            p {
+                    margin: 0;
+                    font-size: medium;
+                }
+            ul {
+                margin: 2rem 0;
+                list-style: circle;
+                padding-left: 4rem;
+            }
+
+            .portfolio {
+                display: flex;
+                li{
+                    margin: 0 3rem;
+                }
+            }
+
+            .content-texte{
+                flex: 1;
+                padding: 4rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .btn {
+                display: block;
+                margin: 20px auto;
+                padding: 10px 20px;
+                background-color: var(--primary);
+                color: var(--secondary);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            
+            }
+            
+            .btn:hover {
+                background-color: var(--secondary); 
+                color: var(--secondary);
+            }
+           
+            
+            #more-info {
+                text-align: center;
+                margin-top: 15px;
+            }
+
+            #more-info2 {
+                text-align: center;
+                margin-top: 15px;
+            }
+            
+            .hidden {
+                display: none; /* Cacher le div par défaut */
+            }
+        }
     }
    }
+
 
    footer{
     grid-area: footer;
@@ -292,3 +383,5 @@ main{
         }
    }
 }
+
+
